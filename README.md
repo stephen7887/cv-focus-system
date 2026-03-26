@@ -11,12 +11,10 @@
 ### 1️⃣ 프론트엔드 서버 실행 (웹 화면)
 프론트엔드 폴더(`CV_Focus_Project` 최상위)에서 터미널을 열고 아래 명령어를 실행합니다.
 
+패키지 설치 및 로컬 서버 실행 (최초 1회만)
 ```bash
-# 패키지 설치 (최초 1회만)
 npm install
-
-# 로컬 서버 실행 (기본 포트: 3000)
-npm start
+node index.js
 ```
 
 👉 실행 후 브라우저에서 `http://localhost:3000` 으로 접속합니다.
@@ -24,11 +22,9 @@ npm start
 ### 2️⃣ AI 백엔드 서버 실행 (FastAPI)
 CNN 모델과 룰베이스 로직이 돌아가는 파이썬 서버입니다. 백엔드 폴더(`main.py`가 있는 곳)에서 터미널을 열고 아래 명령어를 실행합니다.
 
+필요한 파이썬 라이브러리 설치 및 FastAPI 서버 실행(다른 터미널에서 최초 1회만)
 ```bash
-# 필요한 파이썬 라이브러리 설치 (최초 1회만)
 pip install -r requirements.txt
-
-# FastAPI 서버 실행 (기본 포트: 8000)
 uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
